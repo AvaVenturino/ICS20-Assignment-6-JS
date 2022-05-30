@@ -25,19 +25,18 @@ const getImage = async (URLAddress) => {
   try {
     const request = await fetch(URLAddress);
     const jsonData = await request.json();
-    const image = image;
-
-    console.log(jsonData.image);
+    const image = jsonData.url
+    console.log(jsonData.url);
     document.getElementById("api-image").innerHTML =
-      "<img src='https://image.tmdb.org/t/p/" +
+      "<img src='https://random.dog/" +
       image +
       "@2x.png' alt='Weather Icon' width='10%'><br><h5>";
     (">");
-
+    
   } catch (err) {
-    console.log(err);
+    console.log(err)
   }
-};
+}
 getImage(
-  "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
-);
+  "https://random.dog/woof.json"
+)
