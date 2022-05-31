@@ -25,13 +25,12 @@ const getImage = async (URLAddress) => {
   try {
     const request = await fetch(URLAddress);
     const jsonData = await request.json();
-    const image = jsonData.url
     console.log(jsonData.url);
     document.getElementById("api-image").innerHTML =
-      "<img src='https://random.dog/'" +
-      image +
-      "@2x.png' alt='Dog Icon' width='100%' height='100%'><br><h5>";
-    (">");
+      '<img src="' +
+      jsonData.url +
+      '" alt="Dog image" class="center" ' +
+      '>' 
     
   } catch (err) {
     console.log(err)
