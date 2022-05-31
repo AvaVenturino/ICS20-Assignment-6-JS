@@ -28,14 +28,10 @@ const getImage = async (URLAddress) => {
     console.log(jsonData.url);
     document.getElementById("api-image").innerHTML =
       '<img src="' +
-      jsonData.url +
-      '" alt="Dog image" class="center" ' +
-      '>' 
+      jsonData.url + '" alt="Dog image" class="center" ' + ">"; 
     
   } catch (err) {
     console.log(err)
   }
-}
-getImage(
-  "https://random.dog/woof.json"
-)
+};
+getImage("https://random.dog/woof.json");
