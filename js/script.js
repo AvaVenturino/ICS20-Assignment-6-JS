@@ -29,8 +29,7 @@ const getImage = async (URLAddress) => {
     document.getElementById("api-image").innerHTML =
       '<img src="' +
       jsonData.url +
-      '" alt="Dog image" class="center" width="40%" ' +
-      ">"; 
+      '" alt="Dog image" class="center" width="40%" ' + ">"; 
 
   } catch (err) {
     console.log(err);
